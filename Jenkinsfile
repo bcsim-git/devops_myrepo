@@ -18,7 +18,7 @@ pipeline {
                     branch "Development NOT updated"
                 }
           }
-          steps {
+/*          steps {
                  sh '''#!/bin/bash
                  targets=puppetclient1;
                  cd /test/dir/clone;
@@ -27,7 +27,7 @@ pipeline {
                  bolt script run $locate_script -t $targets -u clientadm -p user123 --no-host-key-check --run-as root;
                  '''
                  echo "Development container updated"
-          }
+          } */
           }
           stage('Four') {
           steps {
@@ -41,7 +41,7 @@ pipeline {
                     branch "Production NOT updated"
                 }
           }
-          steps {
+  /*        steps {
                  sh '''#!/bin/bash
                  targets=puppetclient2;
                  cd /test/dir/clone;
@@ -50,7 +50,7 @@ pipeline {
                  bolt script run $locate_script -t $targets -u clientadm -p user123 --no-host-key-check --run-as root;
                  '''
                  echo "Production container updated"
-          }
+          } */
           }
           stage('Completed updating Operation') {
           steps {
